@@ -21,7 +21,7 @@ This project is a Flask web application that checks for arbitrage opportunities 
 
 1. Clone the repository:
 
-   git clone https://github.com/yourusername/arbitrage-opportunity-checker.git
+   git clone https://github.com/Randomui/CEX-DEX-Price-Arbitrage-Scanner.git
    cd arbitrage-opportunity-checker
 
 2. Create a virtual environment and activate it:
