@@ -39,7 +39,7 @@ This project is a Flask web application that checks for arbitrage opportunities 
 Update the API credentials and RPC URL in the `app.py` file:
 
 binance = BinanceHandler(api_key="Your-Binance-Api-Key", api_secret="Your-Binance-Api-Secret")
-solana = SolanaHandler(rpc_url="https://api.testnet.solana.com")
+solana = SolanaHandler(rpc_url="https://api.mainnet-beta.solana.com")
 
 ## Usage
 
