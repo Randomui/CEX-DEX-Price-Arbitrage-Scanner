@@ -11,16 +11,18 @@
     <ul id="opportunities"></ul>
 
     <script>
-        fetch('/arbitrage')
-            .then(response => response.json())
-            .then(data => {
-                const opportunitiesList = document.getElementById('opportunities');
-                data.forEach(opportunity => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `Pair: ${opportunity.pair}, Profit: ${opportunity.profit}`;
-                    opportunitiesList.appendChild(listItem);
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/arbitrage')
+                .then(response => response.json())
+                .then(data => {
+                    const opportunitiesList = document.getElementById('opportunities');
+                    data.forEach(opportunity => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `Pair: ${opportunity.pair}, Profit: ${opportunity.profit}`;
+                        opportunitiesList.appendChild(listItem);
+                    });
                 });
-            });
+        });
     </script>
 </body>
 </html>
