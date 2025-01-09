@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from binance_handler import BinanceHandler
 from solana_handler import SolanaHandler
 from utils import calculate_arbitrage
@@ -8,6 +8,10 @@ app = Flask(__name__)
 # Initialize handlers with appropriate credentials and URLs
 binance = BinanceHandler(api_key="Api-key", api_secret="API-secret")
 solana = SolanaHandler(rpc_url="https://api.testnet.solana.com")
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/arbitrage', methods=['GET'])
 def arbitrage():
